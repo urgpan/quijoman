@@ -38,6 +38,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 
 -- Convert to datetime
+
 -- (id, @date_time_variable)
 -- SET the_sale_date = str_to_date(@date_time_variable, '%d-%c-%y');
 
@@ -69,6 +70,7 @@ select distinct(bathrooms) as unique_values from house_price_data
 order by bathrooms desc;
 
     #- What are the unique values in the column `floors`? --- check
+
 select distinct(floors) as unique_values from house_price_data
 order by floors desc;
 
@@ -115,6 +117,7 @@ group by waterfront;
 -- Is there any correlation between the columns `condition` and `grade`? 
 -- You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column.
 -- Visually check if there is a positive correlation or negative correlation or no correlation between the variables.
+
 -- select state, grade from house_price_data
 -- group by  state
 -- order by state, grade DESC;
@@ -186,7 +189,9 @@ select distinct zipcode from house_price_data;
 
 
 -- 16. Show the list of all the properties that were renovated.
+
 select distinct id, yr_renovated from house_price_data
+
 where yr_renovated != 0
 order by yr_renovated;
 
