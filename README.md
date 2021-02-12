@@ -30,6 +30,8 @@ Exploring the dataset we decided to change two variables:
 * Create additional time variables from our date data: season, month_year, week_year. 
 
 ### Build a Model
+.![Diagram.jpg](attachment:Diagram.jpg)
+
 Regression models used were:
 * Linear Regression
 * KNeighbors Regression
