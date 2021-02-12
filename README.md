@@ -1,13 +1,13 @@
 # queijomen
 
 ## Content
-###### 1. Project Aim
-###### 2. Technologies
-###### 3. Explore the Data.
-###### 4. Build the Model.
-###### 5. Project Status.
-###### 6. Sources.
-###### 7. Additional Information. 
+##### 1. Project Aim
+##### 2. Technologies
+##### 3. Explore the Data.
+##### 4. Build the Model.
+##### 5. Project Status.
+##### 6. Sources.
+##### 7. Additional Information. 
 
 ### Project Aim
 We are three students, currently enrolled in an IronHack data bootcamp. 
