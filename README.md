@@ -48,9 +48,15 @@ Project has finished, and was done in 5 days. We found that Gradient Boosting Re
 Useful websites that we used:
 
 https://eng.uber.com/h3/ 
+
 https://towardsdatascience.com/why-you-shouldnt-use-zip-codes-for-your-hyperlocal-last-mile-analysis-3b9f8613bcc1
+
 https://www.gislounge.com/modifiable-areal-unit-problem-gis/
+
 https://towardsdatascience.com/stop-using-zip-codes-for-geospatial-analysis-ceacb6e80c38
+
 https://hbr.org/2015/11/a-refresher-on-regression-analysis
+
 https://www.upgrad.com/blog/types-of-regression-models-in-machine-learning/
+
 https://www.earthdatascience.org/courses/use-data-open-source-python/use-time-series-data-in-python/date-time-types-in-pandas-python/
