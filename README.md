@@ -30,7 +30,7 @@ Exploring the dataset we decided to change two variables:
 * Create additional time variables from our date data: season, month_year, week_year. 
 
 ### Build a Model
-.![Diagram.jpg](attachment:Diagram.jpg)
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 Regression models used were:
 * Linear Regression
