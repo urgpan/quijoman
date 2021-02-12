@@ -1,4 +1,4 @@
-# queijomen
+# Queijomen
 
 ## Content
 ##### 1. Project Aim
