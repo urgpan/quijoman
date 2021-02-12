@@ -36,6 +36,8 @@ INTO TABLE house_price_regression.house_price_data
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
+
+-- Convert to datetime
 -- (id, @date_time_variable)
 -- SET the_sale_date = str_to_date(@date_time_variable, '%d-%c-%y');
 
@@ -66,7 +68,7 @@ order by bedrooms DESC;
 select distinct(bathrooms) as unique_values from house_price_data
 order by bathrooms desc;
 
-    #- What are the unique values in the column `floors`?
+    #- What are the unique values in the column `floors`? --- check
 select distinct(floors) as unique_values from house_price_data
 order by floors desc;
 
@@ -113,12 +115,25 @@ group by waterfront;
 -- Is there any correlation between the columns `condition` and `grade`? 
 -- You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column.
 -- Visually check if there is a positive correlation or negative correlation or no correlation between the variables.
-select state, grade from house_price_regression
-group by  state
-order by state, grade DESC;
+-- select state, grade from house_price_data
+-- group by  state
+-- order by state, grade DESC;
 
-select (avg(state * grade) - avg(state ) + avg( grade ) ) / ( stddev( state) * stddev(grade)) as 'correlation' from house_price_data;
+-- select (avg(state * grade) - avg(state ) + avg( grade ) ) / ( stddev( state) * stddev(grade)) as 'correlation' from house_price_data;
 
+-- select sum(mean_subject_length_corrected * mean_open_rate_corrected) / sqrt(sum(mean_subject_length_corrected * mean_subject_length_corrected) * sum(mean_open_rate_corrected * mean_open_rate_corrected)) as r
+-- from table_corrected;
+
+drop table if exists correlation_table;
+create table correlation_table( x float not null, y float not null );
+INSERT INTO correlation_table
+SELECT grade, state from house_price_data;
+
+select * from correlation_table;
+select @ax := avg(x) AS Grade, 
+       @ay := avg(y) AS State, 
+       @div := (stddev_samp(x) * stddev_samp(y)) as Deviation
+from correlation_table;
 
 -- 11. One of the customers is only interested in the following houses:
 -- Number of bedrooms either 3 or 4
@@ -171,7 +186,7 @@ select distinct zipcode from house_price_data;
 
 
 -- 16. Show the list of all the properties that were renovated.
-select id, yr_renovated from house_price_data
+select distinct id, yr_renovated from house_price_data
 where yr_renovated != 0
 order by yr_renovated;
 
