@@ -46,6 +46,7 @@ Project has finished, and was done in 5 days. We found that Gradient Boosting Re
 
 ### Sources
 Useful websites that we used:
+
 https://eng.uber.com/h3/ 
 https://towardsdatascience.com/why-you-shouldnt-use-zip-codes-for-your-hyperlocal-last-mile-analysis-3b9f8613bcc1
 https://www.gislounge.com/modifiable-areal-unit-problem-gis/
